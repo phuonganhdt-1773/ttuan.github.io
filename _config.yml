@@ -4,7 +4,7 @@
 # baseurl is the website's URL without the hostname
 
 # If you are building a simple GitHub user page (http://username.github.io) then use these settings:
-url: "http://username.github.io"
+url: "http://ttuan.github.io"
 baseurl: ""
 
 # If you are building a GitHub project page then use these settings:
@@ -14,21 +14,21 @@ baseurl: ""
 # Of course don't forget to change the username and projectname to YOUR username and project
 
 # Name of website
-title: My website
+title: Welcome
 
 # Short description of your site
-description: A virtual proof that name is awesome!
+description: You don't need to be great to start, but you need to start to be great.
 
 # --- Navigation bar options --- #
 
 # List of links in the navigation bar
 navbar-links:
   About Me: "aboutme"
-  Resources:
-    - Beautiful Jekyll: "http://deanattali.com/beautiful-jekyll/"
-    - Learn markdown: "http://www.markdowntutorial.com/"
-    - GitHub Pages: "https://pages.github.com/"
-  Author's home: "http://deanattali.com"
+  # Resources:
+  #   - Beautiful Jekyll: "http://deanattali.com/beautiful-jekyll/"
+  #   - Learn markdown: "http://www.markdowntutorial.com/"
+  #   - GitHub Pages: "https://pages.github.com/"
+  # Author's home: "http://deanattali.com"
 
 # Image to show in the navigation bar - image must be a square (width = height)
 # Remove this parameter if you don't want an image in the navbar
@@ -39,14 +39,12 @@ avatar: "/img/avatar-icon.png"
 # Change all these values or delete the ones you don't want.
 # Important: you must keep the "name" parameter, everything else you can remove
 author:
-  name: Some Person
-  email: "youremail@domain.com"
-  facebook: yourname  # eg. daattali
-  github: yourname    # eg. daattali
+  name: Tuấn Trần
+  email: "tuantv.nhnd@gmail.com"
+  facebook: tuantv.nhnd
+  github: ttuan
   twitter: yourname   # eg. daattali
-  linkedin: yourname  # eg. daattali
-  stackoverflow: yourlink  # eg. "3943160/daattali"
- 
+
 # Select which links to show in the footer
 footer-links-active:
   rss: false
@@ -59,7 +57,7 @@ footer-links-active:
 
 # How to display the link to the website in the footer
 # Remove this if you don't want a link in the footer
-url-pretty: "MyWebsite.com"  # eg. "deanattali.com/beautiful-jekyll"
+url-pretty: "ttuan.github.io"  # eg. "deanattali.com/beautiful-jekyll"
 
 # --- Misc --- #
 
@@ -75,7 +73,7 @@ url-pretty: "MyWebsite.com"  # eg. "deanattali.com/beautiful-jekyll"
 timezone: "America/Vancouver"
 markdown: kramdown
 highlighter: rouge
-permalink: /:year-:month-:day-:title/
+permalink: /:year/:month/:day/:title/
 paginate: 5
 
 kramdown:
@@ -153,6 +151,3 @@ prose:
 
 gems:
   - jekyll-paginate
-
-# Beautiful Jekyll / Dean Attali
-# 2fc73a3a967e97599c9763d05e564189
