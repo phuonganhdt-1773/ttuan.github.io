@@ -1,9 +1,15 @@
+---
+layout: post
+title: Some Google tricks to *google* quickly
+---
+
 ![google.png](https://viblo.asia/uploads/images/43e814045cbfcf4bb5509a0a3249924dfe6972e5/3ebbb689131093fcf7e10375b395326b0de0612c.png)
 
 
 Với đa số lập trình viên, thời gian chúng ta code chỉ chiếm khoảng 20%, còn lại 80% thời gian là để đọc. Mỗi khi gặp vấn đề, người đầu tiên chúng ta nghĩ có thể giúp được là anh *Google* . Chúng ta google hàng ngày, nhưng liệu chúng ta đã tận dụng được tối đa sức mạnh tìm kiếm của Google chưa? Trong bài viết này mình sẽ giới thiệu với mọi người một số tricks nhỏ có thể nâng cao hiệu quả của việc tìm kiếm.
 
 # Google Top Tricks
+
 ### 1. Tìm kiếm với extension của file
 Mình hay đọc mấy bản mềm của sách nên mình rất hay dùng trick này, để tìm kiếm chính xác 1 loại file, chỉ cần thêm `filetype:tên_đuôi_file` vào trong chuỗi tìm kiếm. Ví dụ để tìm sách Object Orinented Design bản pdf, bạn chỉ cần google với từ khóa:
 

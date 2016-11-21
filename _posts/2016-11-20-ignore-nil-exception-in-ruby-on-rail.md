@@ -1,4 +1,9 @@
- ###  I. Giới thiệu
+---
+layout: post
+title: Ignore Nil exception in Ruby on Rails
+---
+
+###  I. Giới thiệu
 
 Là một lập trình viên Ruby, chắc hẳn đã không ít lần bạn gặp lỗi `NoMethodError: undefined method "abc" for nil:NilClass`. Đây là một exception khá phổ biến ở trong Ruby mà mình chắc hẳn chúng ta ai cũng đã từng gặp phải.
 Mỗi lần phải đối mặt với exception này, bạn đã giải quyết thế nào? Trước đây, mình đã nghĩ ngay đến việc dùng `try` để giải quyết vấn đề này, cho đến khi lỗi này lại lặp lại ở 1 chỗ khác, với 1 đối tượng khác. Sử dụng những method như `try` chỉ là các giải pháp tạm thời, không thể giải quyết được tận gốc của vấn đề. Đến đây, có lẽ ta nên đặt câu hỏi: Tại sao ta lại gặp phải lỗi này? Nguyên nhân chính ở đây là gì? Liệu có cách nào loại bỏ nó 1 cách triệt để không? ...
@@ -6,7 +11,7 @@ Mỗi lần phải đối mặt với exception này, bạn đã giải quyết 
 Trong bài viết này, chúng ta sẽ cùng nhau tìm hiểu về `nil` exception và các cách xử lý khi gặp các trường hợp như vậy.
 
 
- ### II. Các vấn đề thường gặp với Nil và cách giải quyết.
+### II. Các vấn đề thường gặp với Nil và cách giải quyết.
 
 Chúng ta cùng xem qua một đoạn code ví dụ gây ra exception này.
 
@@ -134,6 +139,7 @@ end
 Bằng cách sử dụng `allow_nil: true`, hàm `author_email` sẽ trả về nil nếu `author` không tồn tại. Như thế chúng ta sẽ tự bảo vệ mình từ lỗi `NoMethodError`.
 
 Null Object đã giúp ta giải quyết khá nhiều vấn đề, Tuy vậy, trong 1 vài trường hợp, khi bạn muốn tạo 1 object mà có thẻ nhận vào 1 null object và muốn assign nó tới 1 model khác như: `Comment.new(author: NullUser.new`, bạn có thể sẽ gặp lỗi: `ActiveRecord::AssociationTypeMismatch`. Để có thể linh hoạt hơn trong việc giao tiếp với ActiveRecord, ta nên viết 1 module riêng để xử lý:
+
 ```Ruby
 module NullObjectPersistable
   extend ActiveSupport::Concern
@@ -196,7 +202,7 @@ end
 ```
 Như vậy, ta đã add đầy đủ các methods để ActiveRecord có thể raise ra các lỗi thích hợp. Null Object bây giờ đã khá hoàn thiện, bạn có thể đem vào sử dụng để tránh các lỗi liên quan đến `nil class`. :)
 
- ### III. Kết luận
+### III. Kết luận
 
 `Nil` là 1 lỗi khá phổ biến trong Rail application. Để giải quyết vấn đề này có nhiều phuơng pháp. Tùy vào mức độ ảnh hưởng của lỗi này mà bạn nên lựa chọn cách giải quyết phù hợp. Bài viết trên tập trung giới thiệu về  việc xây dựng và sử dụng Null Object pattern thông qua 1 vài ví dụ. Hy vọng bài viết sẽ cho bạn 1 hướng giải quyết mới trong việc xử lý `nil` error.
 
