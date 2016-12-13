@@ -2,6 +2,9 @@
 layout: post
 comments: true
 title: Độ phức tạp của thuật toán
+tags:
+- Dev
+- Algorithm
 ---
 
 ## Mở đầu

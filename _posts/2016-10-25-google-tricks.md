@@ -1,6 +1,9 @@
 ---
 layout: post
 title: Some Google tricks to *google* quickly
+tags:
+- Tricks
+- Google
 ---
 
 ![google.png](https://viblo.asia/uploads/images/43e814045cbfcf4bb5509a0a3249924dfe6972e5/3ebbb689131093fcf7e10375b395326b0de0612c.png)

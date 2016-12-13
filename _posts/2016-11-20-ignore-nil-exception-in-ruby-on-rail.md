@@ -1,6 +1,9 @@
 ---
 layout: post
 title: Ignore Nil exception in Ruby on Rails
+tags:
+- Ruby
+- Dev
 ---
 
 ###  I. Giới thiệu

@@ -24,6 +24,7 @@ description: You don't need to be great to start, but you need to start to be gr
 # List of links in the navigation bar
 navbar-links:
   About Me: "aboutme"
+  Tags: "tags"
   # Resources:
   #   - Beautiful Jekyll: "http://deanattali.com/beautiful-jekyll/"
   #   - Learn markdown: "http://www.markdowntutorial.com/"
