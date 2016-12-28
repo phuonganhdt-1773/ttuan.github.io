@@ -4,6 +4,7 @@ title: How I met Vim
 tags:
 - Vim
 - Mouse Free
+- dotfiles
 ---
 
 
