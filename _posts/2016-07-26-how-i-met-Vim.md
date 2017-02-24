@@ -1,10 +1,9 @@
 ---
 layout: post
-title: How I met Vim
+title: Mouse Freee: How I met Vim
 tags:
-- Vim
 - Mouse Free
-- dotfiles
+- Vim
 ---
 
 
@@ -132,8 +131,3 @@ command mở rộng, được cộng đồng dùng Vim phát triển. Bạn sẽ
 rất nhiều ;)
 
 Have happy time with Vim ;)
-
-
-
-
-

@@ -1,8 +1,8 @@
 ---
 layout: post
-title: Some Google tricks to *google* quickly
+title: Easy Life: Some Google tricks to *google* quickly
 tags:
-- Tricks
+- Easy Life
 - Google
 ---
 
@@ -69,5 +69,3 @@ Tìm kiếm những từ khóa đơn giản nhưng kết quả vẫn rất chín
 Google là một công cụ rất mạnh, giúp chúng ta có thể tìm kiếm rất nhanh chóng. Hãy sử dụng các trick một cách linh hoạt, kết hợp các trick đó với nhau sẽ cho bạn các kết quả chính xác như mong đợi.
 
 Have nice time with Google!
-
-

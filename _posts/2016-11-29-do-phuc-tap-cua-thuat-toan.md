@@ -1,10 +1,10 @@
 ---
 layout: post
 comments: true
-title: Độ phức tạp của thuật toán
+title: Be aws: Độ phức tạp của thuật toán
 tags:
-- Dev
 - Algorithm
+- Be aws
 ---
 
 ## Mở đầu

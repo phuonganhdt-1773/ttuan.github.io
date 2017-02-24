@@ -1,9 +1,9 @@
 ---
 layout: post
 comments: true
-title: Getting started with Dotfiles
+title: Become a SuperUser: Getting started with Dotfiles
 tags:
-- dotfiles
+- Linux
 ---
 
 ![dotfile.png](https://viblo.asia/uploads/images/15710dd85247a62e3aa5a11089b38835729597e9/00ea42cf7ecec30d39fa78d18f9d77a791ee3f00.png)
