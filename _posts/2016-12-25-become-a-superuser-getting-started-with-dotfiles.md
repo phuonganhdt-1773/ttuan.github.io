@@ -1,7 +1,7 @@
 ---
 layout: post
 comments: true
-title: Become a SuperUser: Getting started with Dotfiles
+title: Become a SuperUser&#58; Getting started with Dotfiles
 tags:
 - Linux
 ---

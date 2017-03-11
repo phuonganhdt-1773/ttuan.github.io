@@ -1,7 +1,7 @@
 ---
 layout: post
 comments: true
-title: Become a Rubyist: Create offline page for Rails application
+title: Become a Rubyist&#58; Create offline page for Rails application
 tags:
 - Become a Rubyist
 ---

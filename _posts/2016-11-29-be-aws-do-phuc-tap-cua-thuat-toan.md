@@ -1,7 +1,7 @@
 ---
 layout: post
 comments: true
-title: Be aws: Độ phức tạp của thuật toán
+title: Be aws&#58; Độ phức tạp của thuật toán
 tags:
 - Algorithm
 - Be aws

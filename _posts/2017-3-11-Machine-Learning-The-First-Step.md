@@ -1,7 +1,7 @@
 ---
 layout: post
 comments: true
-title: Machine Learning: The First Step
+title: Machine Learning&#58; The First Step
 tags:
 - Machine-Learning
 ---
@@ -14,13 +14,13 @@ Hôm nay là một ngày đẹp trời, đặc biệt đẹp trời vì mình m�
 
 Nhìn lại cái TODO list còn dang dở, thấy có mấy cái tasks liên quan tới ML mà vẫn chưa thực hiện được, nên nhân lúc vẫn còn đang rảnh rỗi, mình quyết định viết 1 bài, coi như là First Step, mở đầu cho chiến dịch học ML của mình vậy =]]]
 
-Trước đây mình từng đọc qua một quyển sách, trong đó có một câu nói mà mình rất tâm đắc: 
+Trước đây mình từng đọc qua một quyển sách, trong đó có một câu nói mà mình rất tâm đắc:
 > Trước khi bạn bắt đầu làm một việc gì đó, hãy tự trả lời cho mình 2 câu hỏi: Tại sao mình cần phải làm nó? và Mình sẽ làm nó như thế nào?
 
-Tức là trước tiên bạn sẽ phải trả lời 2 câu hỏi: Why? và How? 
+Tức là trước tiên bạn sẽ phải trả lời 2 câu hỏi: Why? và How?
 
 ## Machine Learning? Why?
-Trong khoảng bốn tới năm năm trở lại đây, ML đang dần thể hiện mình là một bước đột phá mới của ngành Công nghệ thông tin. ML đã len lỏi vào trong nhiều lĩnh vực của đời sống. Bạn có thể nhìn thấy ứng dụng của nó ở khắp mọi nơi như: Hệ thống nhận dạng khuôn mặt để tag vào ảnh của Facebook, xe ô tô tự lái của Tesla, AlphaGo chơi cờ vây của Google, Hệ thống recomend video của Youtube, ... Đây chỉ là 1 phần nhỏ trong vô vàn ứng dụng của ML trong đời sống hàng ngày. 
+Trong khoảng bốn tới năm năm trở lại đây, ML đang dần thể hiện mình là một bước đột phá mới của ngành Công nghệ thông tin. ML đã len lỏi vào trong nhiều lĩnh vực của đời sống. Bạn có thể nhìn thấy ứng dụng của nó ở khắp mọi nơi như: Hệ thống nhận dạng khuôn mặt để tag vào ảnh của Facebook, xe ô tô tự lái của Tesla, AlphaGo chơi cờ vây của Google, Hệ thống recomend video của Youtube, ... Đây chỉ là 1 phần nhỏ trong vô vàn ứng dụng của ML trong đời sống hàng ngày.
 
 Quay trở lại với lý do tại sao nên học ML, cá nhân mình thấy nên học ML vì một vài lý do:
 
@@ -44,6 +44,6 @@ Lượn qua 1 vài blog về ML cho người Việt, mình thấy có khá nhi�
 Hầu hết các trang đều nói tới việc học chia làm 2 bước: Bước đầu là học lý thuyết, cần nắm vững các khái niệm, thuật toán cơ bản của ML. Thêm vào đó là các kiến thức Toán liên quan (Có đại số tuyến tính, Xác suất thống kê, ...). Bước thứ hai là học thực hành. Học cách áp dụng các framework vào ML, sử dụng Python để lập trình ML hay học cách thiết kế một Neural Network như thế nào. Và cuối cùng là phải tự tạo ra sản phẩm gì đó cho riêng mình 😎😎😎
 
 ## Conclusion
-Machine Learning là một chặng đường dài, và mình hiểu điều đó. Nhưng chẳng phải mọi con đường dài đều bắt đầu bởi những bước chân đầu tiên? Và mình sẽ cố để tiến xa nhất trên con đường ấy :D 
+Machine Learning là một chặng đường dài, và mình hiểu điều đó. Nhưng chẳng phải mọi con đường dài đều bắt đầu bởi những bước chân đầu tiên? Và mình sẽ cố để tiến xa nhất trên con đường ấy :D
 
 Happy coding! 🤖

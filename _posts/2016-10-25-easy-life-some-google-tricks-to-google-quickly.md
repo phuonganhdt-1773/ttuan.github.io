@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Easy Life: Some Google tricks to *google* quickly
+title: Easy Life&#58; Some Google tricks to *google* quickly
 tags:
 - Easy Life
 - Google

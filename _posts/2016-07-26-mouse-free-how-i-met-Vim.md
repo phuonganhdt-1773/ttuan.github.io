@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Mouse Free: How I met Vim
+title: Mouse Free&#58; How I met Vim
 tags:
 - Mouse Free
 - Vim

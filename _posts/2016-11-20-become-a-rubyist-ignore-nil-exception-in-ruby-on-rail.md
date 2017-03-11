@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Become a Rubyist: Ignore Nil exception in Ruby on Rails
+title: Become a Rubyist&#58; Ignore Nil exception in Ruby on Rails
 tags:
 - Become a Rubyist
 - Dev
