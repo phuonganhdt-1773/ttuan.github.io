@@ -210,6 +210,6 @@ Như vậy, ta đã add đầy đủ các methods để ActiveRecord có thể r
 `Nil` là 1 lỗi khá phổ biến trong Rail application. Để giải quyết vấn đề này có nhiều phuơng pháp. Tùy vào mức độ ảnh hưởng của lỗi này mà bạn nên lựa chọn cách giải quyết phù hợp. Bài viết trên tập trung giới thiệu về  việc xây dựng và sử dụng Null Object pattern thông qua 1 vài ví dụ. Hy vọng bài viết sẽ cho bạn 1 hướng giải quyết mới trong việc xử lý `nil` error.
 
 Cám ơn các bạn đã đọc bài viết.
-![59659170.jpg](https://viblo.asia/uploads/images/15710dd85247a62e3aa5a11089b38835729597e9/e5c9fbd6124b823d0e21996a661d70edb7ab9a01.jpg)
+![59659170.jpg](https://viblo.asia/uploads/full/a836a890-b34d-420c-8f3d-b063e7e2d33f.jpg)
 
 Nguồn: http://blog.ragnarson.com/2015/05/06/problems-with-nil.html

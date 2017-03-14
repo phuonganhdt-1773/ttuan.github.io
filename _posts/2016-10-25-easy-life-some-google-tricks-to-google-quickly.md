@@ -6,7 +6,7 @@ tags:
 - Google
 ---
 
-![google.png](https://viblo.asia/uploads/images/43e814045cbfcf4bb5509a0a3249924dfe6972e5/3ebbb689131093fcf7e10375b395326b0de0612c.png)
+![google.png](https://viblo.asia/uploads/f75aabd4-5443-40d1-8ce0-3958f9c575c7.png)
 
 
 Với đa số lập trình viên, thời gian chúng ta code chỉ chiếm khoảng 20%, còn lại 80% thời gian là để đọc. Mỗi khi gặp vấn đề, người đầu tiên chúng ta nghĩ có thể giúp được là anh *Google* . Chúng ta google hàng ngày, nhưng liệu chúng ta đã tận dụng được tối đa sức mạnh tìm kiếm của Google chưa? Trong bài viết này mình sẽ giới thiệu với mọi người một số tricks nhỏ có thể nâng cao hiệu quả của việc tìm kiếm.

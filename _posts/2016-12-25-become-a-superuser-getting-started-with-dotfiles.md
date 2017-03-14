@@ -6,7 +6,7 @@ tags:
 - Linux
 ---
 
-![dotfile.png](https://viblo.asia/uploads/images/15710dd85247a62e3aa5a11089b38835729597e9/00ea42cf7ecec30d39fa78d18f9d77a791ee3f00.png)
+![dotfile.png](https://cdn-images-1.medium.com/max/1200/1*ayVl2ie6CS0Flqr8TxoYgQ.png)
 
 ## Introduction
 

@@ -43,7 +43,7 @@ Giả sử f(n) và g(n) là các hàm thực không âm của đối số nguy�
 nói "g(n) là O của f(n)" và viết là: g(n) = O(f(n)) nếu tồn tại các hằng số
 dương C và n0 sao cho g(n) <= C * f(n) với mọi n >= n0
 
-![BigO.png](https://viblo.asia/uploads/images/15710dd85247a62e3aa5a11089b38835729597e9/152bb61c9d16aa82125099294a73dabdb0271c06.png)
+![BigO.png](https://viblo.asia/uploads/85e5d30d-9bbf-462f-be31-83511240ad5a.png)
 
 
 
@@ -74,7 +74,7 @@ dương C và n0 sao cho g(n) <= C * f(n) với mọi n >= n0
 
             Nếu thực hiện k(n) lần đoạn chương trình với k(n) = O(g(n)) thì độ phức tạp sẽ là O(g(n).f(n))
 
-![bigO.png](https://viblo.asia/uploads/images/15710dd85247a62e3aa5a11089b38835729597e9/226a551e491ae0112589aa661af1e0edbb91f54c.png)
+![bigO.png](https://viblo.asia/uploads/85eea4d3-89b6-49ed-a468-707afac00a04.png)
 
 
 
@@ -130,8 +130,8 @@ phức tạp cỡ lớn hơn Omega(f(n)) và đúng bằng cỡ Theta(h(n))
 Chúng ta có thể hiểu Big(O), Omega, Theta như những hàm tiềm cận của hàm tính độ phức
 tạp của thuật toán.
 
-![Theta.png](https://viblo.asia/uploads/images/15710dd85247a62e3aa5a11089b38835729597e9/965c619f8ad28bf58cde2e1a86a02da1cf3f9357.png)
-![Omega.png](https://viblo.asia/uploads/images/15710dd85247a62e3aa5a11089b38835729597e9/ebc693e45bac6e7ab437384d3c42eb6ab04d40f2.png)
+![Theta.png](https://viblo.asia/uploads/16c03bbc-e8d7-488f-8b1a-89546a2e6031.png)
+![Omega.png](https://viblo.asia/uploads/f293e4dc-371f-42f7-b295-77e056e06ec0.png)
 
 
 
@@ -148,5 +148,7 @@ Cám ơn các bạn đã dành thời gian đọc bài.
 Nguồn tham khảo:
 
 https://vi.wikipedia.org/wiki/%C4%90%E1%BB%99_ph%E1%BB%A9c_t%E1%BA%A1p_thu%E1%BA%ADt_to%C3%A1n
+
 http://kcntt.duytan.edu.vn/Home/ArticleDetail/vn/168/2006/xac-dinh-do-phuc-tap-thuat-toan://kcntt.duytan.edu.vn/Home/ArticleDetail/vn/168/2006/xac-dinh-do-phuc-tap-thuat-toan
+
 http://tek.eten.vn/danh-gia-do-phuc-tap-thuat-toan

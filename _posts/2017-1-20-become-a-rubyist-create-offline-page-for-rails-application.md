@@ -9,7 +9,7 @@ tags:
 
 *Sử dụng Service Worker để kết nối với người dùng ngay cả khi không có mạng*
 
-![](https://viblo.asia/uploads/199cc148-edfe-4ba4-8f89-9ce3cc18b7bd.jpg)
+![](https://viblo.asia/uploads/full/199cc148-edfe-4ba4-8f89-9ce3cc18b7bd.jpg)
 ## Giới thiệu
 Khi bạn truy cập vào một website nào đó bằng Chrome mà chưa kết nối mạng, bạn sẽ trông thấy hình ảnh chú khủng long như hình trên. :3  Trước đây, khi mình là một normal user, điều này cũng k gây nhiều khó chịu (đang duyệt web mà tự nhiên mất mạng thì chịu thôi). Tuy nhiên, khi trở thành một web developer, mình muốn có một thông báo gì đó cho người dùng, hay nói cách khác là custom lại cái trang "Khủng long" offline kia.
 
@@ -146,7 +146,7 @@ Bạn có thể đọc thêm tại file [README](https://github.com/rossta/servi
 
 ### Moment of truth
 Vậy là chúng ta đã xong phần setup. Trang offline bây giờ đã sẵn sàng để sử dụng. Bây giờ, hãy thử tắt mạng của bạn đi và test thử. Chúng ta có thể sử dụng `Network` tab trong Chrome để sử dụng browser ở chế độ offline. Nếu bạn dùng Firefox có thể sử dụng Work Offline mode.
-![](https://viblo.asia/uploads/efe4170e-c3ab-4d7d-a807-aec2defd1b61.jpg)
+![](https://viblo.asia/uploads/full/efe4170e-c3ab-4d7d-a807-aec2defd1b61.jpg)
 Để có thể xem đoạn demo, check thử trang [Service Worker Rails Sandbox](https://serviceworker-rails.herokuapp.com/offline-fallback/), sau đó ấn F12, mở tab Network và click vào box Offline rồi thử refresh lại trang, bạn sẽ nhận được thông báo:
 ![](https://viblo.asia/uploads/c81828c0-a335-4344-bb39-37cacde5df75.png)
 
