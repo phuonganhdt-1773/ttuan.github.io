@@ -4,7 +4,7 @@ title: About me
 subtitle: Let me be me :v
 ---
 
-I am Tuấn. I love coding, beautiful girls and beer. :v
+I am Tuấn. I'm programmer, writer, cheater and traveler =)). I love coding, beautiful girls and beer. :v
 Now I am Ruby on Rails developer at Framgia Viet Nam.
 This page is where I write smt about my life or what I have learned.
 
