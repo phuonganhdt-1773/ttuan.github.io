@@ -24,6 +24,24 @@ Sau khi dùng `Docker Engine` để đóng gói, bạn có thể đưa lên `Doc
 
 Bạn có thể xem hướng dẫn cài đặt Docker tại [đây](https://docs.docker.com/engine/installation/)
 
+**WHY DOCKER?**
+
+Tại sao nên sử dụng Docker? Theo mình đọc được thì có 1 vài nguyên nhân sau:
+
+* Build 1 lần, chạy được nhiều lần, ở nhiều nơi: 
+
+Hãy tưởng tượng tự nhiên 1 ngày đẹp trời, bạn có hứng thú muốn chuyển qua code Scala vì nghe mn khen tốc độ thằng này quá. Nhưng ngặt nỗi **bạn chỉ muốn thử thôi**, nếu bây giờ mà phải cài đặt các dependencies của nó vào, có khi mất cả buổi chiều ngồi config, rồi đến lúc k thích nữa thì lại mất công ngồi xoá đi :v :v => Không hay cho lắm nhỉ. 
+
+Đó là lúc `docker` tỏ ra hữu hiệu. Bạn có thể search 1 images đã build sẵn các dependencies của Scala, đưa nó về máy và chạy thôi :v Chỉ vài câu lệnh đơn giản, bạn đã có 1 môi trường để phát triển Scala :v Nếu k muốn dùng nữa, bạn có thể remove nó đi, rất nhanh chóng và tiện lợi. ;)
+
+Hoặc bạn có thể đóng gói lại app của mình, kèm cả môi trường hoạt động rồi share cho bạn bè để bọn nó test thử ;) - rất dễ dàng và tiện lợi.
+
+* Nhanh, nhẹ.
+
+Thời gian khởi động Docker rất nhanh do các Container dùng chung nhân với OS thật. Hơn nữa, các Containers có thể sử dụng chung các images nên cũng k tốn nhiều disks ;)
+
+* Deploy hay debug trên các môi trường khá là thuận tiện. (Cái này mình chưa được trải nghiệm =]])
+
 ### 2. Một số khái niệm
 * Docker images: là 1 `read-only template` - đóng gói ứng dụng và các thành phần phụ thuộc của ứng dụng.
 * Docker containers: Mỗi 1 docker container được tạo ra từ 1 docker image. Đây là một môi trường chưa mọi thứ mà ứng dụng có thể dùng để chạy được. Nó độc lập, k ảnh hưởng và bị ảnh hưởng bởi phần còn lại của hệ thống.
