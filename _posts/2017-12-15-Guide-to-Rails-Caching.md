@@ -296,34 +296,3 @@ Từ kết quả trên, ta có thể thấy:
 Bài viết trên có lẽ sẽ đem cho bạn 1 cái nhìn tổng quan về Cache trong Rails, đồng thời có so sánh 1 số Cache Store, để bạn có thể cân nhắc ưu, nhược điểm của từng loại và sử dụng cho phù hợp với Rails app của mình.
 
 Hy vọng bài viết có thể giúp ích cho bạn. ^^
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
