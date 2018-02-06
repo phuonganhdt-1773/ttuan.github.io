@@ -6,28 +6,26 @@ tags:
 - Book
 ---
 
-![](https://downloadsach.com/wp-content/uploads/2017/06/Tuoi-tre-dang-gia-bao-nhieu-205x300.jpg)
+<div style="text-align:center"><img src ="https://downloadsach.com/wp-content/uploads/2017/06/Tuoi-tre-dang-gia-bao-nhieu-205x300.jpg" /></div>
 
-Đợt này công việc rảnh rỗi, nên mình có nhiều thời gian hơn. Mình định sẽ mở đầu 1 chuỗi các bài viết về review sách - những cuốn sách mà mình đang đọc/ đã đọc, coi như là note lại hoặc có 1 chút review cho ai đó =]]. Nhưng vẫn lười quá =)) Nên là trong baì này mình sẽ chỉ trích dẫn một số đoạn văn hay trong cuốn sách "Tuổi trẻ đáng giá bao nhiêu?". 
+Đợt này công việc rảnh rỗi, nên mình có nhiều thời gian hơn. Mình định sẽ mở đầu 1 chuỗi các bài viết về review sách - những cuốn sách mà mình đang đọc/ đã đọc, coi như là note lại hoặc có 1 chút review cho ai đó =]]. Nhưng vẫn lười quá =)) Nên là trong baì này mình sẽ chỉ trích dẫn một số đoạn văn hay trong cuốn sách "Tuổi trẻ đáng giá bao nhiêu?" mà mình đang .
 
-Một vài nhận xét chung về cuốn sách này của mình: 
-+ Giọng văn: Mình khá thích giọng văn của tác giả - một giọng văn của người trẻ nhưng từng trải. Cảm giác như nghe anh/chị hay bạn bè tâm sự vậy :D 
+Một vài nhận xét chung về cuốn sách này của mình:
++ Giọng văn: Mình khá thích giọng văn của tác giả - một giọng văn của người trẻ nhưng từng trải. Cảm giác như nghe anh/chị hay bạn bè tâm sự vậy :D
 + Nội dung: Tác giả viết khá rõ ràng, chia ra từng phần một nên rất mạch lạc: HỌC, LÀM, ĐI. Từng phần sẽ có những chỉ dẫn để người trẻ có thể tham khảo xem mình nên "sống" thật như thế nào :D.
-Giờ mình đang ở giữa giai đoạn của tuổi trẻ, đọc được những lời này thấy cũng thấm quá :3 Và một điều khiến mình thấy vui, đó là quan điểm sống của mình cũng đang dần "đúng" hơn: Sống phải vui, phải thấy thoải mái, phải làm điều mình thích, sống theo cách bạn nghĩ mình nên sống.
+Giờ mình đang ở giữa giai đoạn của tuổi trẻ, đọc được những lời này thấy cũng thấm quá :3
+
+Và một điều khiến mình thấy vui, đó là quan điểm sống của mình cũng đang dần "đúng" hơn: Sống phải vui, phải thấy thoải mái, phải làm điều mình thích, sống theo cách bạn nghĩ mình nên sống.
 
 Dưới đây là một số trích đoạn mình thấy thú vị. (Các bạn có thể tìm được những đoạn trích này ở rất nhiều trang khác :v Mục đích của mình ở đây chỉ để note để sau này đọc lại thôi =]])
 
 ### 0
+
 Bạn hối tiếc vì không nắm bắt lấy một cơ hội nào đó, chẳng có ai phải mất ngủ.
-
 Bạn trải qua những ngày tháng nhạt nhẽo với công việc bạn căm ghét, người ta chẳng hề bận lòng.
-
 Bạn có chết mòn nơi xó tường với những ước mơ dang dở, đó không phải là việc của họ.
-
 Suy cho cùng, quyết định là ở bạn. Muốn có điều gì hay không là tùy bạn.
-
 Nên hãy làm những điều bạn thích. Hãy đi theo tiếng nói trái tim. Hãy sống theo cách bạn cho là mình nên sống.
-
 Vì sau tất cả, chẳng ai quan tâm.
 
 ### 1
@@ -63,4 +61,3 @@ Bạn thân mến, nếu bạn đã có lúc nào đó nghĩ rằng mình là ng
 Hãy tin vào lời thì thầm bên trong mình, hãy trân trọng sự khác biệt, nuôi dưỡng niềm tin vào bản thân mình. Âm thầm rèn luyện, tìm kiếm đam mê, và theo đuổi con đường của riêng mình. Rồi một lúc nào đó, bạn sẽ thấy mình đang sống đúng như cách mà bạn từng mơ ước.
 
 Hãy luôn tin rằng: **Bạn là ngôi sao chờ ngày tỏa sáng.**
-
