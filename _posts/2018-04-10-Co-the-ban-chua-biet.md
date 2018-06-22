@@ -1,4 +1,10 @@
-# Có thể bạn chưa biết?
+---
+layout: post
+comments: true
+title: Có thể bạn chưa biết :v
+tags:
+- Book
+---
 
 ## 1. Tại sao ống kính máy ảnh hình tròn mà lại chụp ra ảnh vuông?
 Thực ra, ống kính không tạo ra chiếc ảnh. Nó chỉ có nhiệm vụ thu thập, bẻ cong và tập trung ánh sáng lên 1 mặt phẳng mà tại đây, hình ảnh sẽ được ghi lại. Trước đây, mặt phẳng đó là phim, còn giờ hầu hết là các trang bị cảm ứng điện từ.
@@ -16,9 +22,9 @@ Khi bạn đập nhẹ, viên pin sẽ dịch chuyển, làm bong 1 phần lớp
 Trong quá trình đun nước có 2 loại bong bóng khí:
 
 * Loại thứ nhất là các hạt bong bóng li ti bám ở thành ấm khi nước chưa đạt tới nhiệt độ sôi.
-* Loại thứ hai là bong bóng nổi lên bề mặt nước khi nước sôi hẳn. 
+* Loại thứ hai là bong bóng nổi lên bề mặt nước khi nước sôi hẳn.
 
-Với loại thứ 2 thì có lẽ mọi người đều biết là do hơi nước hình thành từ sự sôi bên trong khối chất lỏng, tạo thành bong bóng khí và nổi lên bề mặt nước. 
+Với loại thứ 2 thì có lẽ mọi người đều biết là do hơi nước hình thành từ sự sôi bên trong khối chất lỏng, tạo thành bong bóng khí và nổi lên bề mặt nước.
 
 Còn loại thứ nhất là từ đâu ra? Đó là do các phân tử khí được hoà tan trong nước từ trước. Nước có thể hoà tan 1 lượng không khí nhất định, khả năng hoà tan này càng giảm khi nhiệt độ tăng lên (vậy nên mùa hè nóng, cá mới hay ngoi lên mặt nước để thở).
 
@@ -26,22 +32,22 @@ Còn loại thứ nhất là từ đâu ra? Đó là do các phân tử khí đ�
 Đây là một câu hỏi rất thú vị. Màu cam được gọi là "màu cam" vì nó có màu giống quả cam, hay quả cam được gọi là "quả cam" vì nó có màu giống với màu da cam??? =))
 
 + Ở Châu Âu, thế kỉ XIV, các thương nhân lần đầu tiên đã mang đến nước Ý và Bồ Đào Nhà một quả mà người Ba Tư gọi là "narang", giống chanh nhưng to và ngọt hơn. Giữa thế kỉ XVI, thứ quả này trở nên phổ biến -> Người Pháp đã đổi tên loại quả này thành "orange", sau này người Anh lấy luôn tên `orange` để gọi một loại màu sắc nằm giữa màu đỏ và màu vàng. Có 1 điều thú vị là ở nc Pháp tồn tại 1 vùng đất tên là Orange. Tại đây, gia tộc Orange-Nassau đã phát triển để trở thành hoàng tộc Hà Lan, nên về sau hoàng gia Hà Lan đã chọn màu cam làm màu chủ đạo :v -> Đội bóng Hà Lan có đồng phục màu da cam và được gọi là "cơn lốc màu da cam" =]]
-+ Ở Việt Nam, do chịu ảnh hưởng từ tiếng Hán, không có từ "màu da cam" mà chỉ có "hoàng" và "hồng" để chỉ màu vàng và đỏ chứ k có từ để chỉ màu sắc nằm giữa 2 màu này. Sau này người Pháp vào VN nên người Việt đã học cách gọi `orange` để chỉ màu pha vàng đỏ. :v 
++ Ở Việt Nam, do chịu ảnh hưởng từ tiếng Hán, không có từ "màu da cam" mà chỉ có "hoàng" và "hồng" để chỉ màu vàng và đỏ chứ k có từ để chỉ màu sắc nằm giữa 2 màu này. Sau này người Pháp vào VN nên người Việt đã học cách gọi `orange` để chỉ màu pha vàng đỏ. :v
 
 => Quả cam xuất hiện trước, từ đó mới sinh ra tên gọi màu da cam.
 
 ## 5. Điều gì sẽ xảy ra nếu Trái Đất không nghiêng?
 Nếu Trái Đất không nghiêng, sẽ có 1 loạt điều xảy ra:
 
-* Chúng ta không còn mùa rõ rệt nữa. Do trục TĐ thẳng vuông góc với quỹ đạo -> ánh mặt trời chiếu xuống mặt đất cùng 1 góc trong suốt cả năm, nhiệt độ của 12 tháng sẽ k có nhiều biến động. 
-* Ở 2 cực sẽ k còn hiện tượng đêm trắng trong 6 tháng nữa, mà sẽ là quanh năm trắng. vì Mặt Trời luôn xuất hiện ở đường chân trời suốt 365 ngày/năm. Nhiệt độ ở cực sẽ tăng lên -> băng tan nhanh hơn. 
-* Thực vật sẽ thay đổi, phân hoá thành các vành đai sinh thái theo nhiệt độ. 
+* Chúng ta không còn mùa rõ rệt nữa. Do trục TĐ thẳng vuông góc với quỹ đạo -> ánh mặt trời chiếu xuống mặt đất cùng 1 góc trong suốt cả năm, nhiệt độ của 12 tháng sẽ k có nhiều biến động.
+* Ở 2 cực sẽ k còn hiện tượng đêm trắng trong 6 tháng nữa, mà sẽ là quanh năm trắng. vì Mặt Trời luôn xuất hiện ở đường chân trời suốt 365 ngày/năm. Nhiệt độ ở cực sẽ tăng lên -> băng tan nhanh hơn.
+* Thực vật sẽ thay đổi, phân hoá thành các vành đai sinh thái theo nhiệt độ.
 
 .....
 
 
 ## 6. Có thật tiếng đánh rắm càng nhỏ thì càng nặng mùi?
-=)) Một câu hỏi khá bựa. 
+=)) Một câu hỏi khá bựa.
 
 Những "trái bom khí" này có nguồn gốc từ không khí mà chúng ta nuốt vào trong quá trình ăn uống hằng ngày. Một lượng khí bị nuốt vào hệ tiêu hoá sẽ ra bằng đường ợ hơi, số còn lại sẽ "đi tới cuối con đường".
 
@@ -49,7 +55,7 @@ Thành phần của nó chủ yếu từ nito, oxy, carbon dioxit vaf metan - c�
 
 Khi lượng khí không mùi lớn, lúc được giải phóng nó sẽ gây tiếng động lớn. tuy nhiên thành phần lưu huỳnh chỉ chiếm khoản 1% -> không gây mùi, mặc dù tiếng kêu to. Tuy nhiên, với lượng khí không mùi nhỏ hơn thì "trái bom" có thể tạo ra tiếng nhỏ, hoặc thậm chí là không gây tiếng, nhưng tỉ lệ đầu đạn sẽ cao hơn nhiều. bởi vậy hiệu quả sẽ mạnh mẽ hơn.
 ## 7. Tại sao lại nhắm mắt khi hắt hơi?
-Hắt hơi là một phản xạ tự nhiên của cơ thể để loại bỏ các chất gây kích thích đang tác động lên hệ hô hấp. Đó có thể là bụi phấn, lôgn của thú nuôi, ... Khi bạn gặp vấn đề về hô hấp, phần niêm mạc trong mũi của bạn sẽ sưng tấy và trở nên rất nhạy cảm. Một tác động nhỏ cũng sẽ kích hoạt một loạt các phản ứng: bạn cưng ngực, hít sâu và thở ra một cách vô cùng mạnh. 
+Hắt hơi là một phản xạ tự nhiên của cơ thể để loại bỏ các chất gây kích thích đang tác động lên hệ hô hấp. Đó có thể là bụi phấn, lôgn của thú nuôi, ... Khi bạn gặp vấn đề về hô hấp, phần niêm mạc trong mũi của bạn sẽ sưng tấy và trở nên rất nhạy cảm. Một tác động nhỏ cũng sẽ kích hoạt một loạt các phản ứng: bạn cưng ngực, hít sâu và thở ra một cách vô cùng mạnh.
 
 Vậy tại sao chúng ta phải nhắm mắt? Đó là do "phản xạ không điều kiện". Khi hắt hơi, một loạt các cơ trong cơ thể bị kích hoạt và co lại 1 cách vô ý thức, trong đó có cơ mí mắt. Có thể trước đây phản xạ này có mục đích nhất định nhưng giờ đã không còn nhiều ý nghĩa sau quá trình tiến hoá và biến đổi của con người.
 
@@ -62,11 +68,11 @@ Có 1 cách giải thích bằng toán là: Khi bạn được 1 tuổi, 1 năm 
 ## 9. Liệu trong thế kỉ 22 chúng ta có thể chế tạo bảo bối như trong truyện Doraemon?
 Câu trả lời là còn tuỳ vào vật dụng gì =))
 
-Có rất nhiều bảo bối đã được tạo ra: 
+Có rất nhiều bảo bối đã được tạo ra:
 
 * Máy in đồ vật: Với trào lưu sử dụng máy in 3D để in đồ vật từ bản thiết kế điện tử phát triển thì có khả năng trong tương lai, chúng ta có thể in 1 chiếc bánh pizza ở nhà =))
 * Bánh mỳ chuyển ngữ: Google Translate đã đi 1 bước tiến rất xa để xoá bỏ rào cản ngôn ngữ. Giờ có những thiết bị cho phép dịch realtime giữa các ngôn ngữ.
-* Chong chóng tre: Máy GEN H4 đã đạt danh heieuj chiếc trực thăng nhỏ nhất hiện nay. 
+* Chong chóng tre: Máy GEN H4 đã đạt danh heieuj chiếc trực thăng nhỏ nhất hiện nay.
 * Huy hiệu theo dõi: GPS trên điện thoại của chúng ta đó :3
 * Máy thay đổi thời tiết: Sử dụng phương pháp cấy mây (cloud seeding), người ta có thể "hô mưa gọi nắng", gây mưa phục vụ nông nghiệp hay đuổi mây tạo thời tiết đẹp cho các dịp lễ lớn.
 * Máy ảnh du lịch tại chỗ: Ở 1 chỗ và có hình đi du lịch khắp nơi -> điều này trở nên quá đơn giản ở thời đại chúng ta với Photoshop =]]
