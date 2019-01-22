@@ -17,12 +17,12 @@ baseurl: ""
 title: Tuấn Trần
 
 # Short description of your site
-description: You don't need to be great to start, but you need to start to be great.
-
-# --- Navigation bar options --- #
+description: You don't need to be great to start, but you need to start to be grea
 
 # List of links in the navigation bar
 navbar-links:
+  Tech: "index.html"
+  Life: "life"
   Tags: "tags"
   About Me: "aboutme"
   # Resources:
