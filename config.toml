@@ -1,0 +1,28 @@
+baseurl = "http://replace-this-with-your-hugo-site.com/"
+languageCode = "en-us"
+title = "My New Hugo Site"
+theme = "hugo-theme-nix"
+
+[params]
+  Name = "ttuan"
+  HeaderUsername = "ttuan"
+  HeaderHostname = "natu"
+  About = "Info about me"
+  ProfilePicture = "img/avatar.jpg"
+  GithubID = "ttuan"
+  FacebookID = "tuantv.nhnd"
+  InstagramID = "amatachinkara_choi_choi"
+
+[menu]
+  [[menu.header]]
+    name = "til"
+    weight = 2
+    url = "/til"
+  [[menu.header]]
+    name = "posts"
+    weight = 1
+    url = "/posts"
+  [[menu.header]]
+    name = "tags"
+    weight = 0
+    url = "/tags"
