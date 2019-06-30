@@ -414,3 +414,28 @@ app_1  | wait-for-it.sh: db:3306 is available after 0 seconds
 15. None image: https://www.projectatomic.io/blog/2015/07/what-are-docker-none-none-images/
 16. Khi nào thì cần build lại docker? chỉ khi có thay đổi gì đó trong image, tất cả các thao tác như: mount 1 file gì đó vào trong image, thay đổi trong docker compose, chekc gì đó trong volume, ... đều k cần build lại docker image or gọi docker-compose build ;) -> ngon
 17. Dockerizing any application: https://hackernoon.com/how-to-dockerize-any-application-b60ad00e76da
+
+18. Docker under the hood
+https://medium.com/@evalsocket/under-the-hood-docker-98f99189f38a
+
+https://www.wwt.com/all-blog/deep-dive-into-linux-and-docker-containers/
+
+https://www.edureka.co/blog/what-is-docker-container
+
+https://www.psclistens.com/insight/blog/a-deep-dive-into-docker-containers/
+
+https://docs.docker.com/develop/develop-images/multistage-build/#use-multi-stage-builds
+
+https://medium.com/@tonistiigi/advanced-multi-stage-build-patterns-6f741b852fae
+
+https://docs.bitnami.com/containers/how-to/optimize-docker-images-multistage-builds/
+
+https://blog.jawg.io/docker-multi-stage-build/
+
+https://blog.jawg.io/docker-multi-stage-build/
+
+https://dev.to/brpaz/using-docker-multi-stage-builds-during-development-35bc
+
+https://gist.github.com/anonoz/b56e4e32b8c9252a3085fae74b78a7c8
+
+https://www.georg-ledermann.de/blog/2018/04/19/dockerize-rails-the-lean-way/
