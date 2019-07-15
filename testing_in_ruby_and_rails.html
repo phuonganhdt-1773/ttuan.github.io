@@ -1,0 +1,635 @@
+---
+layout: null
+---
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Testing in Ruby on Rails</title>
+    <meta charset="utf-8">
+    <style>
+      @import url(https://fonts.googleapis.com/css?family=Yanone+Kaffeesatz);
+      @import url(https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic);
+      @import url(https://fonts.googleapis.com/css?family=Ubuntu+Mono:400,700,400italic);
+
+      body { font-family: 'Droid Serif'; }
+      h1, h2, h3 {
+        font-family: 'Yanone Kaffeesatz';
+        font-weight: normal;
+      }
+      .remark-code, .remark-inline-code { font-family: 'Ubuntu Mono'; }
+    </style>
+  </head>
+  <body>
+    <textarea id="source">
+
+class: center, mRails
+
+# Testing in Ruby and Rails
+
+*From someone doesn't like writing test*
+
+---
+
+## Tại sao cần viết test?
+
+Theo Công ty:
+* Các quy trình phát triển phần mềm đều yêu cầu phải viết test
+
+=> Viết test là quy định bắt buộc trong các dự án.
+
+Theo google: 😁
+
+* Giảm bug.
+* Cung cấp document cho code.
+* Hỗ trợ việc thiết kế code (test first).
+
+=>  Mục đích chính của việc viết test là giảm thiểu cost khi phát triển phần mềm.
+
+---
+
+## Vấn đề
+
+- Thực tế:
+    - `coding effort < writing test effort`.
+
+**Nguyên nhân là do chúng ta chưa trả lời được các câu hỏi**:
+* `Why` -- Mục đích của việc viết test.
+* `What` -- Test cái gì?
+* `When` -- Test khi nào?
+* `How` -- Test như thế nào?
+
+---
+## `Why` - Mục đích của việc viết test
+
+### 1. Tìm bugs
+
+- Thực tế:
+  - Chúng ta không cover được toàn bộ các tính năng trong dự án
+  => Không nắm được sự ảnh hưởng code của mình.
+  - Dependencies, code base sẽ ngày càng lớn hơn
+  => Nếu phát hiện bug chậm thì sẽ phải sửa ở nhiều chỗ.
+  - Nếu để QA tìm ra bug
+  => Mất thời gian confirm qua lại, assign lại ticket, tìm bug, retest, ... sẽ ảnh hưởng tới tiến độ dự án.
+
+- Sử dụng test:
+  - Tìm ra bug sớm hơn => Fix bug sẽ dễ hơn do dependencies tại thời điểm code ít hơn.
+  - Người khác khi code tính năng của họ, chạy lại bộ test đã được viết, nếu ảnh hưởng tới tính năng khác thì chết test, sẽ phát hiện được ngay.
+
+---
+
+## `Why` -- Mục đích của việc viết test
+
+### 2. Cung cấp documentation
+- Thực tế:
+      - Code lâu sẽ quên spec 😳
+      - Đôi khi chúng ta không hiểu được tại sao dev A lại viết code như thế này.
+      - Không biết sử dụng code người khác viết như thế nào.
+
+- Sử dụng test:
+      - Nhìn vào test ta có thể suy ra được spec một cách nhanh gọn + đơn giản nhất.
+
+- Ref: [devise gem -
+password_controller_test.rb](https://github.com/plataformatec/devise/blob/master/test/controllers/passwords_controller_test.rb)
+---
+
+## `Why` -- Mục đích của việc viết test
+### 3. Hỗ trợ thiết kế code & phát hiện điểm yếu trong code.
+- Thực tế:
+      - Chúng ta không có đủ các thông tin để thiết kế code 1 cách tốt nhất ngay từ đầu. Luôn có sự thay đổi, mở rộng tính năng
+       => Đôi khi chúng ta viết code đang chỉ giải quyết cho case hiện tại, chờ thêm thông tin để thiết kế tốt hơn.
+      - Thấy khó để viết test cho đoạn code mình vừa viết ra, phải khởi tạo, setup quá nhiều, gọi tới nhiều services, models, ...
+- Sử dụng test:
+      - Khi có thêm thông tin, ta thay đổi code base, do đã có test trước đó rồi
+      => Ta sẽ tự tin thay đổi hơn, chỉ cần bộ test case cho phần đó vẫn hoạt động đúng.
+      - Nếu thấy khó viết test cho đoạn mình vừa viết, thì có thể là do code đang thực hiện quá nhiều việc, nhiều context, ..
+      => Không đúng với các nguyên tắc của SOLID.
+      - Viết test khó, chứng tỏ là các object khác khi sử dụng lại code cũng khó.
+
+---
+
+## `What` -- Test cái gì?
+- Thực tế:
+      - Ta thường không viết test hoặc viết quá nhiều test.
+      - Test không cần thiết làm chậm quá trình check CI.
+
+=> Cần DRY test, viết test đúng chỗ.
+
+- Rails: **Mọi đoạn code logic đều nên được viết test (model, lib, services, supports, ..)**
+
+---
+## `What` -- Test cái gì?
+
+- OOP: Một object thường bao gồm: `data` và `messages`
+```ruby
+class Foo
+      attr_reader :foo_bar
+
+      def initialize foo_bar
+        @foo_bar = foo_bar
+      end
+
+      def incomming
+        Bar.new(foo_bar).outgoing
+      end
+
+      private
+      def private_method
+        # logic here
+      end
+end
+```
+
+---
+## `What` -- Test cái gì?
+
+- Message type:
+  * Incomming messages: những hàm public của 1 object.
+  * Outgoing messages: những hàm public của object khác mà object hiện tại đang gọi tới.
+
+- Message test:
+  - Đối với incomming messages, ta cần test giá trị trả về của nó. Chỉ cần so sánh giá trị trả về của hàm bằng 1 giá trị mong muốn. (state test)
+  - Outgoing messages thì k cần phải state test. Vì nó đã được test ở class define nó rồi.
+
+---
+## `What` -- Test cái gì?
+
+- Outgoing messages:
+      * Query messages: Những methods không có hiệu ứng phụ (ghi file, ghi DB, goi API ngoài, ...).
+      * Command messages: Những methods có hiệu ứng phụ.
+
+- Outgoing messages test:
+      * Query messages không cần test vì đơn giản nó chỉ trả về giá trị.
+      * Command messages: Cần test nhưng test dưới dạng behavior test: test xem message được gọi bao nhiêu lần, với tham số gì, ...
+
+Vd:
+```ruby
+let(:foo_bar) { "foo_bar" }
+let(:result) { "Result" }
+it "should call outgoing messsage from bar object" do
+  expect(Bar).to receive_message_chain(:new, :outgoing)
+    .with(foo_bar).with(no_args).and_return result
+end
+```
+---
+## `When` -- Test khi nào?
+
+- Theo google:
+      - Nên viết test trước khi viết code. Vì nó giúp ta định hướng việc thiết kế code tốt hơn, ít phụ thuộc vào nhau, có tính tái sử dụng cao.
+
+- Thực tế:
+      - ... (yaoming)
+
+---
+## `How` -- Test như thế nào?
+
+- Các loại object trong app:
+      - Object đang test: instance object của class đang test
+      - Những object còn lại: là những instance objects của các class khác mà được gọi tại class đang test.
+
+- **Chỉ quan tâm tới object đang test, ignore những object còn lại**
+
+Các object còn lại sẽ dùng mock, stub, double,.. để tạo ở bên trên và gọi lại ở trong test.
+
+- **Tất cả các method public của object đều cần phải test**
+
+Cần test đúng giá trị trả về cho mọi trường hợp có khả năng xảy ra bên trong public method đó.
+
+---
+## `How` -- Test như thế nào?
+Test `incomming_messages`
+```ruby
+class Point
+    TOTAL_SUBJECT = 15
+
+    def initialize student
+      @student = student
+    end
+
+    def average_point
+      student.total_point / TOTAL_SUBJECT
+    end
+end
+```
+```ruby
+# point_test.rb
+# Cách 1
+describe Point do
+  let(:student) {FactoryBot.create :student, math_point: 8, music_point: 6, ...}
+  let(:point) {Point.new(student)}
+
+  descirbe "#average_point" do
+    it {expect(point.average_point).to eq 7.5}
+  end
+end
+```
+---
+## `How` -- Test như thế nào?
+- Vấn đề:
+      + Tốn bộ nhớ khi khởi tạo student mà chỉ sử dụng để gọi 1 hàm.
+      + Khi logic trong hàm `total_point` của student tăng lên sẽ dẫn đến chạy chậm code của test bên point.
+
+- Giải pháp: Sử dụng `double` để **stub** gọi hàm `total_point`
+
+```ruby
+# point_test.rb
+# Cách 2
+describe Point do
+  let(:student) {double("student"}
+  let(:point) {Point.new(student)}
+
+  descirbe "#average_point" do
+    before {allow(student).to receive(:total_point).and_return(120)}
+    it {expect(point.average_point).to eq 7.5}
+  end
+end
+```
+=> Chỉ cần bên student vẫn còn hàm `total_point` thì đoạn code trên sẽ vẫn chạy nhanh.
+Nhưng nếu trong class student ta đổi tên hàm thì sao? => Việc test Role sẽ được đề cập trong 1 bài khác :D
+
+---
+## `How` -- Test như thế nào?
+Test Outgoing messages:
+
+- Query messages: Những method không có side effect. Ví dụ như method `total_point` ở trên, nó đã được test ở class Student rồi.
+
+- Command messages: Những method không chỉ đơn thuần trả về 1 giá trị, mà còn chứa những side effect khác.
+Ví dụ như: save dữ liệu vào db, ghi vào file, gửi thông báo, ...
+
+Ta cần đảm bảo việc các command messages này **được gọi** đúng.
+
+---
+## `How` -- Test như thế nào?
+
+```ruby
+class RegisterUser
+  def initialize user, mailer
+    @user = user
+    @mailer = mailer
+  end
+
+  attr_reader :user, :mailer
+
+  def perform
+    user.save
+    mailer.deliver_later
+  end
+end
+```
+Ở đây có 2 tác vụ là lưu và gửi mail. Cả 2 methods đều tồn tại side effect.
+
+Ta cần test instance của `RegisterUser` khi gọi hàm `perform` thì sẽ phải gọi cả hàm `save` của user và hàm `deliver_later` của `mailer` object.
+
+---
+## `How` -- Test như thế nào?
+`Mock` được sử dụng để test hành vi. Mock định nghĩa sự mong đợi một method được gọi bởi 1 method khác khi nó được chạy.
+
+```ruby
+expect(object).to receive(:method_name).with(list_of_argument)
+testing_object.send_method
+```
+```ruby
+describe RegisterUser do
+  let(:user) {double "user"}
+  let(:mailer) {double "mailer"}
+  let(:register_user) {RegisterUser.new user, mailer}
+
+  describe "#perform" do
+    it do
+      expect(user).to receive :save
+      expect(mailer).to receive :deliver_later
+      register_user.perform
+    end
+  end
+end
+```
+Hoặc có 1 cách test khác cho đoạn code trên:
++ Build 1 object user = FactoryBot
++ Gọi hàm perform, sau đó check lại xem user đó đã được save hay chưa. Và check xem email đó đã được gửi hay chưa.
+
+---
+## `How` -- Test như thế nào?
+
+Highlight recommend: http://www.betterspecs.org/
+
++ Describe methods, sử dụng `context`, `subject`, `shared_example`, ...
+
+---
+## `How` -- Test như thế nào?
+
+#### Rails model
+- Associations
+- Validations
+- Queries/ Scope
+- Methods
+- Others: `enum`, `delegate`, `include OtherModule`, ...
+
+---
+## `How` -- Test như thế nào?
+#### Associations + Normal Validations
+```ruby
+RSpec.describe Company, type: :model do
+  describe "relations" do
+    it { should belong_to(:client) }
+    it { should have_many(:products) }
+  end
+
+  describe "validations" do
+    describe "name" do
+      let(:max_length) { Settings.validations.company.name.max_length }
+
+      it { should validate_presence_of(:name).on :not_draft }
+      it { should validate_length_of(:name).is_at_most max_length }
+    end
+  end
+end
+```
+
+---
+## `How` -- Test như thế nào?
+#### Custom Validations
+```ruby
+# app/validators/key_name_format_validator.rb
+class KeyNameFormatValidator < ActiveModel::EachValidator
+  REGEX_NOT_ENGLISH = /[\u3000-\u303f\u3040-\u309f\u30a0-\u30ff\uff00-\uff9f\u4e00-\u9faf\u3400-\u4dbf]/
+  REGEX_SPECIAL_CHARATERS = /[^a-zA-Z_0-9]/
+
+  def validate_each record, attribute, value
+    return if value.blank?
+    if value =~ REGEX_NOT_ENGLISH
+      record.errors.add attribute, :not_english
+    elsif value =~ REGEX_SPECIAL_CHARATERS
+      record.errors.add attribute, :special_charaters
+    end
+  end
+end
+
+# app/models/company.rb
+class Company
+  validates :key_name, key_name_format: true
+end
+```
+---
+## `How` -- Test như thế nào?
+#### Custom Validations
+Để test đoạn custom validations trên, ta có thể dùng cách này:
+```ruby
+Rspec.describe Company do
+  describe "validations" do
+      describe "key_name" do
+        it { should allow_value("abc").for :key_name }
+        it { should allow_value("abc1212").for :key_name }
+        it { should_not allow_value("が発").for :key_name }
+        it { should_not allow_value("a b c ").for :key_name }
+      end
+  end
+end
+```
+Tuy nhiên, ở mỗi class khác mà có sử dụng chung custom validation này thì ta sẽ lại phải copy lại. => Duplicate code.
+---
+## `How` -- Test như thế nào?
+#### Custom Validations
+Giải pháp: Tạo 1 class "ảo", sử dụng custom validation này, sau đó test trên class đó.
+```ruby
+class KeyNameFormatValidatable
+  include ActiveModel::Validations
+  attr_accessor :key_name
+
+  def initialize key_name
+    @key_name = key_name
+  end
+
+  validates :key_name, key_name_format: true
+
+  RSpec.describe KeyNameFormatValidatable, type: :validator do
+    describe "shouble be valid" do
+      let(:key_names_list){["abc", "abc1212"]}
+      it do
+        key_names_list.each do |name|
+          KeyNameFormatValidatable.new(name).should be_valid
+        end
+      end
+    end
+  end
+end
+```
+---
+## `How` -- Test như thế nào?
+#### Queries/ Scope
+- Theo ý kiến cá nhân của mình, đối với các câu queries/ scope đơn giản, ta không cần phải viết test :v
+- Đối với các phần query phức tạp, tốt nhất là nên tách ra, sử dụng Query Object. Sau đó viết test cho Query Object đó.
+
+Việc sử dụng các design pattern vừa giúp tách được phần logic ra một nơi để dễ tái sử dụng, thoáng code, mà còn dễ viết test hơn.
+
+---
+
+## `How` -- Test như thế nào?
+#### Methods, enum, delegate, `include OtherModule`, ...
+- Theo ý kiến cá nhân, phần `enum`, `delegate` không cần phải test, vì nó không chứa logic.
+- Đối với các methods nằm bên trong model, ta cần viết test cho tất cả các method public. (Có thể sử dụng cách test state, đưa input và expect output).
+- Đối với các module được include vào, ta nên viết test cho các module đó theo dạng `shared_example`, sau đó include vào trong test của model.
+
+---
+## `How` -- Test như thế nào?
+#### Rails controllers
+- Trong controller chỉ nên chứa những logic đơn giản (như lấy dữ liệu, render, set flash message, ...). Nếu logic quá phức tạp thì nên sử dụng Support hoặc Service Object, ...
+
+- Khi test cho controller, chỉ nên test theo dạng điều hướng request.
+- Đối với các hàm create/ update, **có thể** test thêm xem dữ liệu đã thực sự được update hay chưa.
+
+=> Viết test cho controller mục đích chính là để đảm bảo các trang vẫn sẽ hoạt động bình thường (không xảy ra các lỗi 4xx: chưa login, chết trang, ....)
+---
+## `How` -- Test như thế nào?
+```ruby
+RSpec.describe Admin::CampaignsController, type: :controller do
+  describe "GET #index" do
+    context "when admin didn't logged in" do
+      before { get :index }
+      it_behaves_like "admin unauthenticated"
+    end
+
+    context "when admin logged in" do
+      let(:current_admin) { FactoryBot.create :admin }
+      before do
+        3.times { FactoryBot.create :campaign }
+        sign_in current_admin, scope: :admin
+        get :index
+      end
+
+      it "should return HTTP status code 200" do
+        expect(response).to have_http_status 200
+      end
+
+      it "should render view index" do
+        expect(response).to render_template :index
+      end
+
+      it "should assign @campaigns" do
+        expect(assigns(:campaigns).size).to eq 3
+      end
+    end
+  end
+```
+
+---
+## `How` -- Test như thế nào?
+```ruby
+describe "POST#create" do
+  context "admin logged in" do
+    context "invalid params" do
+      let(:params) do
+        { "campaign" => {"name" => nil} }
+      end
+
+      before { post :create, params: params }
+
+      it "should return HTTP status code 200" do
+        expect(response).to have_http_status 200
+      end
+
+      it "should render view new" do
+        expect(response).to render_template :new
+      end
+
+      it "should return with error message" do
+        expect(flash[:alert]).to eq I18n.t("admin.campaigns.create.failed")
+      end
+
+      it "should not create new campaign" do
+        expect(assigns(:campaign).persisted?).to be false
+      end
+    end
+  end
+end
+```
+---
+
+## `How` -- Test như thế nào?
+#### Rails Object: Service Object, Query Object, Support, Decorator, ...
+
+- Các Object dạng này đều có thể test theo dạng state test và behavior test như bên trên.
+
+- Đối với Support, Query Object, cá nhân mình hay dùng Mock, vì nội dung trong support chủ yếu là tương tác với DB để lấy dữ liệu.
+- Đối với Decorator, mình hay dùng kiểu state test, vì những hàm trong decorator thường xử lý logic riêng.
+
+---
+## `How` -- Test như thế nào?
+Vd về sử dụng Mock để test `supports/law.rb`
+```ruby
+class Supports::Law
+  def cities
+    @cities ||= ::City.default_order.pluck :name, :id
+  end
+end
+```
+
+```ruby
+RSpec.describe Supports::Law do
+describe "#cities" do
+  it do
+    expect(City).to receive_message_chain(:default_order, :pluck)
+      .with(no_args).with(:name, :id)
+    support.cities
+  end
+end
+```
+---
+## `How` -- Test như thế nào?
+Vd về sử dụng state test để test `decorators/campaign_decorator.rb`
+```ruby
+class CampaignDecorator < Draper::Decorator
+  def total_clicks
+    campaign_logs.sum(&:clicks_count)
+  end
+end
+
+```
+```ruby
+RSpec.describe CampaignDecorator do
+  describe "#total_clicks" do
+    # Fake data here ....
+    it "should return total impressions of user" do
+      expect(campaign.decorate.total_clicks).to eq 3
+    end
+  end
+end
+```
+---
+## `How` -- Test như thế nào?
+```ruby
+class Api::V1::ChannelQuery
+  attr_reader :relation
+
+  def initialize relation = Channel.all
+    @relation = relation.extending Scopes
+  end
+
+  def popular_channels_by_category category_id
+    relation.joins(:videos).by_category(category_id).group_by_id.having_gt_five_videos.order_count_desc
+  end
+
+  module Scopes
+    def by_category category_id
+      where videos: {category_id: category_id, status: :shared}
+    end
+
+    def group_by_id
+      group :id
+    end
+
+    def having_gt_five_videos
+      having "count(channels.id) > ?", Settings.category.popular_channels.min_videos
+    end
+
+    def order_count_desc
+      order Arel.sql("count(channels.id) desc, channels.created_at desc")
+    end
+  end
+end
+```
+---
+## `How` -- Test như thế nào?
+
+```Ruby
+RSpec.describe Api::V1::ChannelQuery do
+  describe "#popular_channels_by_category" do
+    let(:category) {FactoryBot.create :category}
+    let(:channel) {FactoryBot.create :personal_channel}
+    let!(:videos) do
+      FactoryBot.create_list :video, 10, category: category, channel: channel, status: :shared
+    end
+    let!(:another_video) {FactoryBot.create :video}
+
+    it {expect(Api::V1::ChannelQuery.new.popular_channels_by_category category.id).to eq [channel]}
+  end
+end
+```
+---
+## Tổng kết
+- WHY: Viết test rất tốt cho code của mình và code dự án. Hãy viết test!!!
+- WHAT: Có 2 loại message là `incomming` và `outgoing` message. Tất cả `incomming` messages đều cần viết test. Còn outgoing thì chỉ cần sử dụng mock để test những method có side effects.
+- WHEN: ... (yaoming) Nên viết test trước khi code =))
+- HOW:
+      + Có 2 cách test phổ biến: state test (cho đầu vào, expect đầu ra) và behavior test (thường expect có gọi method)
+      + Đối với Rails model, cần test associations, validations, methods.
+      + Đối với Rails controller, nên test đơn giản: test điều hướng request hoặc test xem dữ liệu đã được create/udpate trong db chưa
+      + Đối với Service Object, Query Object, Decorator, Support, ... Tuỳ vào loại object/ hàm cần test mà test theo kiểu state hoặc mock dữ liệu cho hợp lý.
+
+---
+# Thank you
+
+* https://github.com/ttuan
+* tuantv.nhnd@gmail.com
+* STK: 049 100 006 3890 - TRAN VAN TUAN - Vietcombank chi nhánh Thăng Long. =))
+
+
+
+
+    </textarea>
+    <script src="https://remarkjs.com/downloads/remark-latest.min.js">
+    </script>
+    <script>
+      var slideshow = remark.create();
+    </script>
+  </body>
+</html>
