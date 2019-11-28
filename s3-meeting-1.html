@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Title</title>
+    <meta charset="utf-8">
+    <style>
+      @import url(https://fonts.googleapis.com/css?family=Yanone+Kaffeesatz);
+      @import url(https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic);
+      @import url(https://fonts.googleapis.com/css?family=Ubuntu+Mono:400,700,400italic);
+
+      body { font-family: 'Droid Serif'; }
+      h1, h2, h3 {
+        font-family: 'Yanone Kaffeesatz';
+        font-weight: normal;
+      }
+      .remark-code, .remark-inline-code { font-family: 'Ubuntu Mono'; }
+    </style>
+  </head>
+  <body>
+    <textarea id="source">
+
+class: center, middle
+# Table of Contents
+- Review lại buổi gặp mặt lần trước
+- Một số vấn đề về cách làm việc
+- Một số vấn đề trong thái độ khi làm việc
+- Trả lời câu hỏi
+
+---
+# Review the last meeting
+
+- Core concept: **Chủ động**
+- Only you can help yourself.
+
+---
+# 1. Một số vấn đề về cách làm việc
+
+---
+# Chọn thời gian làm việc
+- Biểu hiện:
+	- Làm việc hay bị phân tâm, đầu óc không tập trung
+	- Nhìn màn hình 1 lúc lâu mà không nhớ ra mình định làm gì
+
+- Giải pháp:
+	- Chọn thời gian làm việc hợp tốt nhất của mình trong ngày. Trong khoảng thời gian đó cần hoàn thành được 80% lượng công việc của task mình sẽ làm trong này.
+	- Khi tập trung làm việc, tìm cách hạn chế mọi việc có thể làm mình phân tâm: tắt thông báo điện thoại, ignore chatwork, nghe nhạc, ...
+
+---
+# Làm việc không có định hướng
+- Biểu hiện:
+	- Khi nhận task, không hình dung được ra mình sẽ cần phải làm gì trong task.
+	- Khi làm xong việc A rồi lại không biết mình sẽ làm gì tiếp theo
+
+- Giải pháp:
+	- Mỗi khi nhận task cần phải **liệt kê ra giấy** những việc mình sẽ cần phải làm trong task này. Với mỗi subtask, cần **hình dung trong đầu** xem sẽ phải làm gì, sau đó estimate thời gian.
+	- Khi đã có list việc cần làm rồi, phải biết phần việc nào chiếm nhiều thời gian nhất. **Tất cả những việc nào tốn ít thời gian cần phải làm thật nhanh**. Như vậy ta mới có thời gian cho những subtasks to.
+
+---
+# Làm việc không có định hướng - Tips
++ Tính năng bạn làm ra, dù giao diện đẹp đến đâu, cũng **không có giá trị nếu nó không chạy được**. Vì vậy, **giao diện** luôn là thứ cuối cùng mình làm trong 1 task.
+
++ **Luôn hình dung trong đầu theo follow của end users**, xem họ sẽ làm gì khi dùng tính năng này. Sau đó mình code theo đúng follow đấy.
+
+Case study: Login with WSM.
+
+---
+# Làm việc không cẩn thận
+- Biểu hiện:
+	+ Khi gửi PR bị comment rất nhiều lỗi sai cơ bản, (ví dụ dùng dấu ' thay cho ", thiếu dòng trống ở cuối file, ..)
+	+ PR được kéo về máy người khác test thì lại sai rất nhiều lỗi, có khi function chưa chạy được. - Vấn đề đặt ra là người gửi PR có biết nó còn lỗi hay không?
+	+ Có checklist ở mỗi PR rồi nhưng vẫn không làm theo, k check
+	+ Mắc cùng 1 lỗi sai nhiều lần.
+
+---
+# Làm việc không cẩn thận
+
+- Giải pháp:
+	+ Review lại **từng dòng** code của mình mỗi khi gửi PR. Bạn gửi nhanh PR 30s, nhưng nếu bị dính lỗi cơ bản, PR của bạn sẽ bị delay 30 phút.
+	+ Khi PR của mình có vấn đề, cần phải đi hỏi để giải quyết, hoặc phải note lại vào description của PR. **Không được có tư tưởng giấu bug**, leader hoặc QA phát hiện ra thì fix, không phát hiện ra thì thôi. Nếu để KH phát hiện ra thì sẽ ảnh hưởng tới uy tín của cty.
+	Luôn giữ mindset: Mình gặp 1 vấn đề không fix được, thì đi hỏi, hỏi xong -> trình mình tăng, vấn đề được giải quyết, tốt cho cho cả 2.
+	+ Luôn làm theo checklist
+	+ Với mỗi 1 lỗi bị comment, tốt nhất nên note lại vào 1 file. sau đó **thường xuyên đọc lại**. 1 cách tốt hơn đó là chăm chỉ đi comment dạo ở PR của người khác, vừa giúp người khác, vừa giúp mình ôn lại kiến thức.
+
+---
+# Làm việc không cẩn thận
+
+- Giải pháp:
+	+ Trước khi gửi PR cần phải test thật kĩ lại ở local, ít nhất phải check qua các case:
+		+ Không được sai text, giao diện hiển thị bên ngoài luôn là thứ đập vào mắt.
+		+ Phải test code logic chạy được luồng flow chuẩn.
+		+ Đối với form thì cần phải test các case: Max length, blank, nhập sai định dạng, ... xem lỗi thông báo có đúng không.
+
+---
+# Ôm quá nhiều việc -> Overload
+- Biểu hiện:
+	+ Ai giao gì cũng làm :v
+	+ Estimate công việc trên mức năng lực của mình.
+
+=> Làm việc không xong => Ở lại muộn OT => Tinh thần căng thẳng => Hôm sau vẫn không xong việc => Down mood => Không làm được gì.
+
+=> Estimate thứ 3 xong nhưng do vượt quá khả năng => Việc không xong được => Các sếp báo cáo KH là xong nhưng lại phải xin lỗi => Plan tổng của sếp lên bị ảnh hưởng, phải lùi lại
+
+---
+# Ôm quá nhiều việc -> Overload
+- Giải pháp:
+	+ **Luôn estimate công việc đúng với năng lực**
+	+ **Mọi người làm việc dựa trên con số**. Không ai có thể ép mình phải làm vượt quá sức lực của mình. Ví dụ: Làm việc A, B, C đang mất 24h, tức là phải thứ 4 mới xong. Nếu giao thêm việc D, E, F, cũng 24h nữa mà bắt xong trong tuần thì phải từ chối 1 việc. Con số estimate thể hiện rất rõ là việc đó có xong được hay không. Từ con số thì k ai ép mình được.
+	+ Không được cả nể, phải biết cách nói **Không** trong 1 vài tình huống. Thời gian của chúng ta có hạn, cần tập trung cho những **mục tiêu quan trọng** với mình.
+
+---
+# Làm việc thiếu chủ động
+- Biểu hiện:
+	+ Thấy có vấn đề nhưng không raise lên, cũng không đi hỏi. Ví dụ khi làm task thấy khúc mắc, google không ra nhưng vẫn chày cối cố đấm ăn xôi -> Task bị chậm.
+	+ Không chủ động nhận task khi rảnh, mà tư tưởng ai giao việc cho mới làm, còn không thì cứ chơi thôi :v
+
+- Giải pháp:
+	+ Luôn chủ động, thấy vấn đề thì phải **có hành động** để giải quyết vấn đề đó, không ỷ lại vào người khác, không giấu dốt của bản thân
+	+ Mạnh dạn **nói ra ý kiến cá nhân** của mình. Nếu chưa đúng, người khác sẽ sửa -> mình lại có góc nhìn khác hơn.
+	+ Làm nhiều luôn là cách để học được nhanh nhất. Tuy nhiên cần làm *thông minh*, cân bằng giữa **mục tiêu cá nhân**, **thực lực bản thân** với **thời gian mình có**
+
+---
+# 2. Một số vấn đề thái độ khi làm việc
+---
+# Làm việc thiếu trách nhiệm
+- Biểu hiện:
+	+ Không commit với deadline đề ra, tâm lý không xong thì kệ, để delay lại sang tuần sau.
+	+ "Code là việc của tôi, còn review là việc của leader"
+	+ Gửi PR auto approve
+
+- Giải pháp:
+	+ Luôn giữ đúng deadline. nếu vì lý do bất khả kháng, cần phải nói với leader để lùi lịch.
+	+ Khi gặp vấn đề, phải luôn nhớ rằng: Dự án là quan trọng nhất. Nếu không fix được, google 20 phút mà không xong thì phải đi hỏi, nhờ support.
+	+ Review + đọc comments của PR người khác là cách để tránh mắc phải sai lầm nhiều lần.
+
+
+---
+# Không có tư tưởng làm cho dự án tốt lên
+
+- Biểu hiện:
+	+ Code chỉ quan tâm tới phần mình làm, không nghĩ tới có bị ảnh hưởng chỗ nào khác nữa không.
+	+ Thấy code logic nhìn tù nhưng cũng k đi hỏi xem làm thế nào để code nhìn tốt hơn
+	+ Thấy code của người khác (đã được merge) chưa tốt nhưng cũng không muốn sửa.
+	+ Copy code từ chỗ khác, khi bị comment thì chỉ sửa mỗi phần của mình, không sửa chỗ mình vừa copy.
+
+- Giải pháp:
+	+ Vd về câu chuyện các hướng đạo sinh dọn rác.
+	+ **Code có tâm**
+	+ Luôn giữ mindset: **Code là code chung của cả dự án, và mình là 1 phần trong dự án, mỗi người góp 1 ít sức, dự án sẽ tốt lên**
+
+---
+# Cách hỏi đáp
+- Biểu hiện:
+	+ Khi đi hỏi thì trình bày lủng củng, không đúng trọng tâm, trình bày xong mà người được hỏi vẫn không biết là định hỏi cái gì.
+	+ Hỏi khi chưa có chuẩn bị gì, hỏi 1 câu, người được hỏi lại hỏi lại 1 câu -> không biết trả lời sao
+	+ Thái độ lồi lõm khi đi hỏi
+
+- Giải pháp:
+	+ Trước khi hỏi cần phải google (tốt nhất là nên tìm được 1 giải pháp chạy được). Nếu không, khi đi hỏi cũng đã phải chuẩn bị, thử qua 1 vài giải pháp rồi.
+	+ Phải hiểu rằng: "Tại sao người kia lại phải trả lời câu hỏi của bạn?" Vì rõ ràng, đi hỏi là để giải quyết vấn đề của mình cơ mà, sao người kia phải nhẹ nhàng hỏi han các kiểu để giúp mình? Từ đó mà giữ thái độ cho đúng mực.
+	+ Nên trình bày theo template:
+		* Trình bày vấn đề: Em đang làm tính năng xxxx - Màn hình ABC, em gặp vấn đề xxxxx
+		* Giải pháp tạm thời: Em đã thử dùng biện pháp xxxxx nhưng thấy nó chưa hay (hoặc nhưng chưa giải quyết được )
+		* Câu hỏi: Anh có biện pháp nào khác / suggest nào khác cho phần này không ạ?
+
+---
+# Tranh luận
+
+Luôn giữ tư tưởng:
+	+ **Tranh luận để giải quyết vấn đề**
+	+ **Tranh luận để tốt lên**
+	+ **Tranh luận chứ không phải cãi nhau**
+	+ **Đừng bao giờ đặt nặng việc thắng thua mỗi khi tranh luận**
+	+ Nhận lỗi nếu mình sai, cảm ơn nếu được chỉ cái mới :D
+
+    </textarea>
+    <script src="https://remarkjs.com/downloads/remark-latest.min.js">
+    </script>
+    <script>
+      var slideshow = remark.create();
+    </script>
+  </body>
+</html>
